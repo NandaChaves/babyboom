@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Baby Boom</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="resources/css/style.css">
+<link rel="stylesheet" href="resources/css/index.css">
+</head>
+<body>
+  <button class="float border border-white rounded-circle border-opacity-10" id="scrollToTopBtn">
+    <i class="fas fa-long-arrow-alt-up"></i>
+  </button>
+
+<!--Navbar-->
+
+<div class="homepage-intro has-bg-img position-relative">
+  <h2 class="text-center text-white position-absolute top-50 start-50 translate-middle">Rapaz</h2>
+
+  
+  <picture class="darkened-image">
+    <source media="(max-width: 925px)" srcset="imgs/mobile-img-intro-listagem@2x.png">
+    <img  class="bg-img bg-cover" alt="img-intro-listagem" src="imgs/img-intro-listagem.png">
+  </picture>
+
+</div>
+
+<div class="container-xxl mx-auto m-5">
+  <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a class="text-decoration-none text-uppercase" href="#">Produtos</a></li>
+      <li class="breadcrumb-item active text-uppercase" aria-current="page">Rapaz</li>
+    </ol>
+  </nav>
+
+  <div class="d-flex justify-content-between align-items-md-center mb-3 py-2 py-lg-0 prod-list-top-btns">
+    
+
+    <div class="dropdown btn-open-filters">
+      <button class="btn btn-secondary open-filters d-md-none mr-auto fw-bold text-uppercase" data-bs-toggle="offcanvas" href="#prodFilters" role="button" aria-controls="prodFilters">Filtrar</button>
+    </div>
+
+    <div class="dropdown">
+    <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <div class="dropdown-label text-uppercase fw-bold">Ordenar</div>
+      <span class="dropdown-selected"></span>
+    </button>
+    <div class="dropdown-menu dropdown-menu-end orderby-block">
+      <a class="" href="" data-order="order-prod_date-desc" rel="nofollow">Mais recentes</a>
+      <a class="" href="" data-order="order-nome-asc" rel="nofollow">Nome a-z</a>
+      <a class="" href="" data-order="order-nome-desc" rel="nofollow">Nome z-a</a>
+      <a class="" href="" data-order="order-pvp-asc" rel="nofollow">Preço mais baixo</a>
+      <a class="" href="" data-order="order-pvp-desc" rel="nofollow">Preço mais alto</a>
+      <a class="" href="" data-order="order-stock-asc" rel="nofollow">Stock mais baixo</a>
+      <a class="" href="" data-order="order-stock-desc" rel="nofollow">Stock mais alto</a>
+    </div>
+  </div>
+
+  </div>
+
+  <div class="row">
+
+    <div class="col-12 col-md-3 col-xl-2 prod-list-filter-wrapper offcanvas offcanvas-start" tabindex="-1" id="prodFilters" aria-labelledby="prodFilters">
+      <div class="offcanvas-header d-lg-none pe-0">
+        <button class="btn ms-auto px-3" type="button" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fa-solid fa-backward"></i></button>
+      </div>
+      
+      <div class="offcanvas-body p-3 pt-2 pb-3">
+
+        <div class="filter-block">
+          <button class="filter-title collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#filterMarcas" aria-expanded="false" aria-controls="filterMarcas">Marca</button>
+          <div class="prod-list-filter-list collapse show" id="filterMarcas">
+            <div class="custom-scroll">
+              <a href="#" title="" class="filter-checkbox" rel="nofollow">Aden Anais</a>
+              <a href="#" title="" class="active filter-checkbox">Bobo Choses</a>
+              <a href="#" title="" class="filter-checkbox">Buho Bcn</a>
+              <a href="#" title="" class="filter-checkbox">Jellycat</a>
+              <a href="#" title="" class="filter-checkbox">Jojo Factory</a>
+              <a href="#" title="" class="filter-checkbox">Louise Misha</a>
+            </div>
+          </div>
+        </div>
+
+        <hr class="card-line w-100">
+        <div class="filter-block">
+          <button class="filter-title collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#filterType" aria-expanded="false" aria-controls="filterType">Tipo de produto</button>
+          <div class="prod-list-filter-list collapse" id="filterType">
+            <div class="custom-scroll">
+
+              <a href="#" title="" class="filter-checkbox" rel="nofollow">Vestidos</a>
+              <a href="#" title="" class="active filter-checkbox">Blusas</a>
+              <a href="#" title="" class="filter-checkbox">Camisas</a>
+              <a href="#" title="" class="filter-checkbox">Bodies</a>
+              <a href="#" title="" class="filter-checkbox">Acessórios</a>
+
+            </div>
+          </div>
+        </div>
+        <hr class="card-line w-100">
+        <div class="filter-block">
+          <button class="filter-title collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#filterSizes" aria-expanded="false" aria-controls="filterSizes">Tamanho</button>
+          <div class="prod-list-filter-list collapse" id="filterSizes">
+            <div class="custom-scroll filter-box-wrapper">
+              <a href="#" title="" class="filter-checkbox ">XXS</a>
+              <a href="#" title="" class="active filter-checkbox ">S</a>
+              <a href="#" title="" class="filter-checkbox ">M</a>
+              <a href="#" title="" class="filter-checkbox ">L</a>
+              <a href="#" title="" class="filter-checkbox ">XL</a>
+            </div>
+          </div>
+        </div>
+
+        <hr class="card-line w-100">
+         <div class="filter-block">
+          <button class="filter-title collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#filterPrice" aria-expanded="false" aria-controls="filterPrice">Preço</button>
+          <div class="prod-list-filter-list collapse" id="filterPrice">
+            <div class="price-slider">
+              <div id="connect" data-min-price="0" data-max-price="9999" data-min-selected="200" data-max-selected="8888"></div>
+              <div class="d-flex justify-content-between products-filters-slider-values">
+                <span id="range-min-value">0 €</span>
+                <span id="range-max-value">9999 €</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr class="card-line w-100"> 
+      </div>
+
+    </div>
+    <div class="col-12 col-md prod-list-content-wrapper">
+      <div class="row g-4 prod-list-wrapper position-relative" id="prod-list">
+
+        <div class="col-6 col-md-3 prod-list-col">
+          <div class="card">    
+            <picture>
+              <source media="(max-width:992px)" srcset="imgs/img1@2x.png">
+              <img class="card-img-top img-fluid" alt="Card image cap" src="imgs/img1.png">
+            </picture>
+
+            <hr class="card-line w-100">
+            <div class="card-info">
+              <div class="card-marca">BUHO BCN</div>
+              <div class="card-name">Alpine Knit Beanie Hat</div>
+              <div class="card-price fw-bold">30,00 €</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-3 prod-list-col">
+          <div class="card">
+            <picture>
+              <source media="(max-width:992px)" srcset="imgs/img2@2x.png">
+              <img class="card-img-top img-fluid" alt="Card image cap" src="imgs/img2.png">
+            </picture>
+
+            <div class="prod-list-top-tags">
+              <div class="prod-tag tag-discount t-novo">Novo</div>
+            </div>
+
+            <hr class="card-line w-100">
+            <div class="card-info">
+              <div class="card-marca">BUHO BCN</div>
+              <div class="card-name">Lennox Fleece Sweater</div>
+              <div class="card-price fw-bold">30,00 €</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-3 prod-list-col">
+          <div class="card">    
+            <picture>
+              <source media="(max-width:992px)" srcset="imgs/img3@2x.png">
+              <img class="card-img-top img-fluid" alt="Card image cap" src="imgs/img3.png">
+            </picture>
+
+            <hr class="card-line w-100">
+            <div class="card-info">
+              <div class="card-marca">BUHO BCN</div>
+              <div class="card-name">Lennox Fleece Sweater</div>
+              <div class="card-price fw-bold">30,00 €</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-3 prod-list-col">
+          <div class="card">
+            <picture>
+              <source media="(max-width:992px)" srcset="imgs/img4@2x.png">
+              <img class="card-img-top img-fluid" alt="Card image cap" src="imgs/img4.png">
+            </picture>
+
+            <hr class="card-line w-100">
+            <div class="card-info">
+              <div class="card-marca">BUHO BCN</div>
+              <div class="card-name">Alpine Knit Beanie Hat</div>
+              <div class="card-price fw-bold">75,00 €</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-3 prod-list-col">
+          <div class="card">    
+            <picture>
+              <source media="(max-width:992px)" srcset="imgs/img5@2x.png">
+              <img class="card-img-top img-fluid" alt="Card image cap" src="imgs/img5.png">
+            </picture>
+
+            <hr class="card-line w-100">
+            <div class="card-info">
+              <div class="card-marca">BUHO BCN</div>
+              <div class="card-name">Alpine Knit Beanie Hat</div>
+              <div class="card-price fw-bold">30,00 €</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-3 prod-list-col">
+          <div class="card">
+            <picture>
+              <source media="(max-width:992px)" srcset="imgs/img6@2x.png">
+              <img class="card-img-top img-fluid" alt="Card image cap" src="imgs/img6.png">
+            </picture>
+
+            <hr class="card-line w-100">
+            <div class="card-info">
+              <div class="card-marca">BUHO BCN</div>
+              <div class="card-name">Alpine Knit Beanie Hat</div>
+              <div class="card-price fw-bold">30,00 €</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-3 prod-list-col">
+          <div class="card">    
+            <picture>
+              <source media="(max-width:992px)" srcset="imgs/img7@2x.png">
+              <img class="card-img-top img-fluid" alt="Card image cap" src="imgs/img7.png">
+            </picture>
+
+            <div class="prod-list-top-tags">
+              <div class="prod-tag tag-discount t-promo">Promo</div>
+            </div>
+
+            <hr class="card-line w-100">
+            <div class="card-info">
+              <div class="card-marca">BUHO BCN</div>
+              <div class="card-name">Lennox Fleece Sweater</div>
+              <div class="card-price fw-bold"> 55,00 € <del> 75,00 €</del></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-3 prod-list-col">
+          <div class="card">
+            <picture>
+              <source media="(max-width:992px)" srcset="imgs/img8@2x.png">
+              <img class="card-img-top img-fluid" alt="Card image cap" src="imgs/img8.png">
+            </picture>
+
+            <hr class="card-line w-100">
+            <div class="card-info">
+              <div class="card-marca">BUHO BCN</div>
+              <div class="card-name">Alpine Knit Beanie Hat</div>
+              <div class="card-price fw-bold">75,00 €</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="p-5 d-flex align-items-center justify-content-center">
+
+      <nav aria-label="Page navigation example p-2 bd-highlight col-example">
+        <ul class="pagination">
+          <li class="page-item"><a class="page-link" href="#"><i class="fa fa-angle-double-left" aria-hidden="true"></i></a></li>
+          <li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-left"></i></a></li>
+
+          <li class="page-item"><a class="page-link" href="#" data-page="1">1</a></li>
+          <li class="page-item active"><a class="page-link" href="#" data-page="2">2</a></li>
+          <li class="page-item"><a class="page-link" href="#" data-page="3">3</a></li>
+
+          <li class="page-item"><a class="page-link" href="#"><i class="fas fa-angle-right"></i></a></li>
+          <li class="page-item"><a class="page-link" href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a></li>
+        </ul>
+      </nav>
+
+    </div>
+
+  </div>
+</div>
+
+<div class="footer_container"> 
+  <div class="container">
+    <div class="col-lg-1 col-lg-offset-11 col-sm-1 col-sm-offset-11 col-xs-3 col-xs-offset-9">
+      <div class="top" style="position: fixed;">
+        <i class="fa fa-arrow-up" aria-hidden="true"></i>
+        <div>TOPO</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <div class="container-fluid">
+    <div class="row" id="footer-pages">
+  
+    <div class="col-12 col-md-4 col-lg-3 footer-pages-block">
+  
+    <div class="d-flex align-items-center footer-dropdown-toggle">
+    <a href="#pag-footer-1" class="footer-title-button" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="pag-footer-1">Babyboom<i class="ms-2 fa fa-angle-down d-md-none"></i></a>
+    </div>
+  
+    <div id="pag-footer-1" class="footer-dropdown-menu d-md-block collapse show" data-parent="#footer-pages">
+    <ul class="footer-links-wrapper">
+    <li class="first  footer-links-block"><a href="#" title="A nossa história">A nossa história</a></li>
+    <li class="footer-links-block   localizacao_e_contactos"><a href="#" title="Marcas">Marcas</a></li>
+    <li class="last  footer-links-block"><a href="#" title="Contactos">Contactos</a></li>
+    </ul>
+    </div>
+  
+    </div>
+  
+    <div class="col-12 col-md-4 col-lg-3 footer-pages-block">
+  
+    <div class="d-flex align-items-center footer-dropdown-toggle" data-toggle="collapse" data-target="#pag-footer-2" aria-expanded="false" aria-controls="pag-footer-2">
+    <a href="#pag-footer-2" class="footer-title-button" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="pag-footer-2"><b>Informação</b><i class="ms-2 fa fa-angle-down d-md-none"></i></a>
+    <span class="icon-angle-bottom d-md-none"></span>
+    </div>
+    <div id="pag-footer-2" class="footer-dropdown-menu d-md-block collapse" data-parent="#footer-pages">
+    <ul class="footer-links-wrapper">
+    <li class="footer-links-block"><a href="#" title="Trocas ou devoluções">Trocas ou devoluções</a></li>
+    <li class="first  footer-links-block"><a href="#" title="Termos e Condições">Termos e Condições</a></li>
+    <li class="footer-links-block"><a href="#" title="Política de Privacidade">Política de Privacidade</a></li>
+    <li class="last  footer-links-block"><a href="#" title="Livro de reclamações">Livro de reclamações</a></li>
+    </ul>
+    </div>
+  
+    </div>
+  
+    <div class="col-12 col-md-4 col-lg-3 footer-pages-block">
+  
+      <div class="d-flex align-items-center">
+      <h1 class="footer-title-button">Apoio ao cliente</h1>
+      </div>
+  
+      <div id="pag-footer-3" class="footer-contacts footer-dropdown-menu d-md-block">
+        <a class="footer-contact" href="tel:+351 22 610 9069"><i class="fa-solid fa-phone fa-flip-horizontal"></i>22 610 9069</a>
+        <div class="office-hours"><p>Segunda a sexta entre as 10h30 e as 14h00 e das <br> 15h00 às 19h30, exceto feriados e domingos.</p>
+        <a class="footer-email" href="mailto:babyboom_porto@hotmail.com">babyboom_porto@hotmail.com</a>
+        </div>
+      </div>
+  
+      </div>
+  
+    <div class="col-12 col-md-4 col-lg-3 footer-pages-block language-col flex-column-reverse">
+  
+      <div class="title-languages">
+        <h2 class="footer-title-button footer-txt-language">Idioma</h2>
+      </div>
+  
+    <div class="lang-wrapper">
+      
+  
+      <a type="button" role="button" class="dropdown-opt lang-sele dropdown-toggle d-inline text-decoration-none"data-toggle="dropdown" data-bs-toggle="collapse" data-bs-target=".lang-dropdown" aria-expanded="false" aria-controls="lang-dropdown" id="dropdown-opt">            
+        <img src="https://cdn.lvengine.com/interface/imgs/flag_PT.png" class="lang-img show-flag" alt="PT">
+        <span class="lang-opt d-none d-md-block d-xl-inline-block lang-show" >Português</span>
+        <span class="dropdown-selected d-inline"></span>
+      </a>
+  
+      <div class="dropdown-option dropdown-languages" id="lang-dropdown">
+        
+      <div class="collapse dropdown lang-dropdown"  data-bs-toggle="collapse" aria-controls="lang-dropdown"> 
+        <a type="button" href="#" class="lang-item text-decoration-none" title="English" id="EN">
+          <img src="https://cdn.lvengine.com/interface/imgs/flag_EN.png" class="lang-img" alt="EN">
+          <span class="lang-opt lang-pick d-none d-md-block d-xl-inline-block">English</span>
+        </a>
+      </div>
+  
+      <div class="collapse dropdown lang-dropdown"  data-bs-toggle="collapse" aria-controls="lang-dropdown"> 
+        <a type="button" href="#" class="lang-item text-decoration-none" title="Español" id="ES">
+          <img src="https://static.lvengine.net/vendalinda/interface/imgs/ES-flag.png" class="lang-img" alt="ES">
+          <span class="lang-opt lang-pick d-none d-md-block d-xl-inline-block">Español</span>
+        </a>
+      </div>
+  
+      <div class="collapse dropdown lang-dropdown"  data-bs-toggle="collapse" aria-controls="lang-dropdown"> 
+        <a type="button" href="#" class="lang-item text-decoration-none" title="Português" id="PT">
+          <img src="https://cdn.lvengine.com/interface/imgs/flag_PT.png" class="lang-img" alt="PT">
+          <span class="lang-opt lang-pick d-none d-md-block d-xl-inline-block">Português</span>
+        </a>
+      </div>
+      
+      </div>
+  
+      </div>
+  
+      <div class="social-media-wrapper">
+        <h2 class="footer-title-button footer-txt-social">Siga-nos:</h2>
+        <div class="social-media-icon-wrapper d-flex flex-wrap justify-content-start justify-md-content-center">
+        <a class="social-media-icon-block facebook" title="Facebook" href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a class="social-media-icon-block instagram" title="Instagram" href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+  
+  </div>
+  
+  
+  <div class="row copyright">
+    <hr class="col-12 line-footer">
+    <div class="paga d-flex col-lg-6 col-12 justify-content-center justify-content-md-start">
+        <div class="title-payment d-none d-md-block" id="title-payment">Métodos de Pagamento</div>
+        <div class="imgs">
+          <img src="https://static.lvengine.net/vendalinda/interface/imgs/f-multibanco.png" alt="MB" class="payment-logo" width="76"  height="36">
+          <img src="https://static.lvengine.net/vendalinda/interface/imgs/f-mbway.png" alt="MB WAY"  class="payment-logo" width="106" height="60">
+          <img src="https://static.lvengine.net/vendalinda/interface/imgs/f-paypal.png" alt="PAYPAL" class="payment-logo" width="142" height="60">
+        </div>
+    </div>
+  
+    <div class="footer-copyrights d-flex col-lg-6 col-12 align-items-center justify-content-center justify-content-md-end">
+      <span class="footer-copy-text">© 2020 BABYBOOM* - <f> Todos os direitos reservados</f> | <a href="https://www.lvengine.com/" class="copyright-lv d-none" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 223.01 25" style="fill:#B4B4B4" width="54px" height="7px"><path class="cls-lv-icon" d="M97.12,24.76l5.37-17a6.23,6.23,0,0,0,.37-1.41l.13-1a2.29,2.29,0,0,0-.24-1.17,1.65,1.65,0,0,0-.67-.65,2.61,2.61,0,0,0-.89-.27,7.74,7.74,0,0,0-1.06-.06H94.6L87.82,24.75h-9L86.53.12h19.24a9.42,9.42,0,0,1,4.84.95A3.37,3.37,0,0,1,112,4.17a16.23,16.23,0,0,1-.94,4.77l-4.94,15.81Zm31,.24a38.07,38.07,0,0,0,5.16-.29,9.45,9.45,0,0,0,3.34-1.08,6,6,0,0,0,2.11-2,13.5,13.5,0,0,0,1.45-3.3l2.11-6.83h-9l-3.17,10.37h-3.55a4.5,4.5,0,0,1-3-.84,3.19,3.19,0,0,1-1-2.53,12.62,12.62,0,0,1,.68-3.65l1.66-5.59a16.77,16.77,0,0,1,1.34-3.16,6.14,6.14,0,0,1,1.61-1.88,4.83,4.83,0,0,1,2-.86,13.47,13.47,0,0,1,2.4-.19H144.9l.91-3H129.68A19,19,0,0,0,124,.89,12.35,12.35,0,0,0,119.89,3a11.79,11.79,0,0,0-2.8,3.32,22.92,22.92,0,0,0-1.92,4.33l-1.06,3.71a21.26,21.26,0,0,0-.7,2.58,11.64,11.64,0,0,0-.24,2.25,6,6,0,0,0,.46,2.41,4.39,4.39,0,0,0,1.47,1.79,7.48,7.48,0,0,0,2.73,1.15,19,19,0,0,0,4.23.4ZM152,24.76,159.75.12h-9L143,24.77Zm32.94,0,4.94-15.81a16.23,16.23,0,0,0,.94-4.77,3.37,3.37,0,0,0-1.43-3.1,9.42,9.42,0,0,0-4.84-.95H165.32L157.6,24.77h9l6.77-21.56H179a7.74,7.74,0,0,1,1.06.06,2.61,2.61,0,0,1,.89.27,1.65,1.65,0,0,1,.67.65,2.29,2.29,0,0,1,.24,1.17l-.13,1a6.23,6.23,0,0,1-.37,1.41l-5.34,17ZM20.38,21.84H7.77L14,.28H5L.54,15.41c-.89,3-.69,5.57.56,7.28a5.65,5.65,0,0,0,4.81,2.16c5.63,0,12.18.05,13.49.06Zm13.54,2.83L49.66,0H45.19L32.76,19.61,32.1,0H23.16c.16,2.16,1,13.35,1,20.22,0,2.61,1.63,4.42,4,4.42ZM79.68,1.29a5.14,5.14,0,0,0-2.61-1,34,34,0,0,0-5-.29h-6a22.73,22.73,0,0,0-4.5.41,14.18,14.18,0,0,0-3.53,1.17,11.42,11.42,0,0,0-2.72,1.85,12.69,12.69,0,0,0-2,2.48,16.69,16.69,0,0,0-1.2,2.27,23,23,0,0,0-.93,2.58l-1.06,3.71a18.72,18.72,0,0,0-.88,4.31A5.48,5.48,0,0,0,49.88,22a5.15,5.15,0,0,0,2.63,2.06,14.52,14.52,0,0,0,5.21.75H74.06l1-3.07H62.56a11.4,11.4,0,0,1-2.28-.19,2.45,2.45,0,0,1-1.55-.88,3.08,3.08,0,0,1-.45-2,13.83,13.83,0,0,1,.67-3.18l1.68-5.62a15.74,15.74,0,0,1,1.62-3.63,6.93,6.93,0,0,1,2.44-2.4,6.93,6.93,0,0,1,3.42-.8h3.75L69.66,9.54c-.85,2.59-.91,2.83-5.28,2.83l-1.06,3.08h8.74c2.87,0,5.12-1.46,5.86-3.8l1.81-5.29a10.81,10.81,0,0,0,.63-3.23A2.38,2.38,0,0,0,79.68,1.29Zm142.63,0a5.14,5.14,0,0,0-2.61-1,34,34,0,0,0-5-.29h-6a22.73,22.73,0,0,0-4.5.41,14.18,14.18,0,0,0-3.53,1.17A11.42,11.42,0,0,0,198,3.44a12.69,12.69,0,0,0-2,2.48,16.69,16.69,0,0,0-1.2,2.27,23,23,0,0,0-.93,2.58l-1.06,3.71a18.72,18.72,0,0,0-.88,4.31,5.48,5.48,0,0,0,.67,3.23,5.15,5.15,0,0,0,2.63,2.06,14.52,14.52,0,0,0,5.21.75h16.33l1-3.07H205.18a11.4,11.4,0,0,1-2.28-.19,2.45,2.45,0,0,1-1.55-.93,3.08,3.08,0,0,1-.45-2,13.83,13.83,0,0,1,.67-3.18l1.69-5.57a15.74,15.74,0,0,1,1.62-3.63,6.93,6.93,0,0,1,2.44-2.4,6.93,6.93,0,0,1,3.42-.8h3.75l-2.19,6.47c-.85,2.59-.91,2.83-5.28,2.83L206,15.46h8.74c2.87,0,5.12-1.46,5.86-3.8l1.81-5.29A10.81,10.81,0,0,0,223,3.13,2.38,2.38,0,0,0,222.31,1.29Z" transform="translate(0)"></path></svg>                </a>
+      </span>
+    </div>
+  </div>
+  
+  </div>
+</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="resources/js/script.js"></script>
+</body>
+</html>
